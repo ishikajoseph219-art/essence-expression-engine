@@ -3,8 +3,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
 import { products } from "@/lib/products";
-import hero from "@/assets/hero.jpg";
-import story from "@/assets/story.jpg";
+import hero from "@/assets/hero.webp";
+import story from "@/assets/story.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
