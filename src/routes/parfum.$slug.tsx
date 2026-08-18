@@ -44,7 +44,7 @@ function ParfumDetail() {
             alt={`${product.name} parfum bottle by Indrele`}
             width={912}
             height={1200}
-            className="w-full bg-ink object-cover"
+            className="w-full bg-ink object-contain"
           />
 
           <div className="flex flex-col justify-center">
