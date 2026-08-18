@@ -77,21 +77,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Indrele — Unisex Extrait Parfums" },
+      { title: "Indrele — Unisex Extrait Parfums, Dark & Absolute" },
       {
         name: "description",
         content:
-          "Indrele is a small-batch parfum house of four unisex absolutes: amber leather, oud smoke, frozen citrus and green woods.",
+          "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods. High-concentration unisex extraits in small batches.",
       },
       { name: "author", content: "Indrele" },
-      { property: "og:title", content: "Indrele — Unisex Extrait Parfums" },
+      { property: "og:title", content: "Indrele — Unisex Extrait Parfums, Dark & Absolute" },
       {
         property: "og:description",
         content:
-          "Four absolutes. Extrait concentration. Made in small batches.",
+          "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods. High-concentration unisex extraits in small batches.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Indrele — Unisex Extrait Parfums, Dark & Absolute" },
+      { name: "twitter:description", content: "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods. High-concentration unisex extraits in small batches." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/cc867994c2ea301b67cb5695896b62a7/id-preview-58793998--b01c7bca-4e3a-4c4f-8770-c75a8a21618a.lovable.app-1787023883708.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/cc867994c2ea301b67cb5695896b62a7/id-preview-58793998--b01c7bca-4e3a-4c4f-8770-c75a8a21618a.lovable.app-1787023883708.png" },
     ],
     links: [
       {

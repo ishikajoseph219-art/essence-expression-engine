@@ -15,11 +15,11 @@ export const Route = createFileRoute("/")({
         content:
           "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods. High-concentration unisex extraits in small batches.",
       },
-      { property: "og:title", content: "Indrele — Unisex Extrait Parfums" },
+      { property: "og:title", content: "Indrele — Unisex Extrait Parfums, Dark & Absolute" },
       {
         property: "og:description",
         content:
-          "Four absolutes. Oud, leather, frozen citrus and green woods. High-concentration unisex parfums made in small batches.",
+          "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods. High-concentration unisex extraits in small batches.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
