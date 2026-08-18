@@ -12,7 +12,7 @@ export function ProductCard({ product }: { product: Product }) {
             loading="lazy"
             width={912}
             height={1200}
-            className="h-[26rem] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="h-[26rem] w-full object-contain transition-transform duration-700 group-hover:scale-105"
           />
         </div>
         <div className="mt-5 text-center">
