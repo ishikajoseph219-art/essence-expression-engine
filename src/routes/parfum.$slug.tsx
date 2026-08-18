@@ -42,8 +42,8 @@ function ParfumDetail() {
           <img
             src={product.image}
             alt={`${product.name} parfum bottle by Indrele`}
-            width={912}
-            height={1200}
+            width={760}
+            height={1000}
             className="w-full bg-ink object-contain"
           />
 

@@ -91,8 +91,8 @@ function Home() {
             src={story}
             alt="Dark marble hall with gold light and drifting smoke"
             loading="lazy"
-            width={1600}
-            height={912}
+            width={1400}
+            height={798}
             className="h-[70vh] w-full object-cover"
           />
           <div className="fade-veil absolute inset-0" />

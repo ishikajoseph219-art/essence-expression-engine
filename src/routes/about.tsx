@@ -34,8 +34,8 @@ function About() {
           <img
             src={story}
             alt="Dark marble hall lit by gold light shafts"
-            width={1600}
-            height={912}
+            width={1400}
+            height={798}
             className="h-[60vh] w-full object-cover"
           />
           <div className="fade-veil absolute inset-0" />
