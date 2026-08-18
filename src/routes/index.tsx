@@ -27,6 +27,18 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "preload", as: "image", href: hero, fetchpriority: "high" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Brand",
+          name: "Indrele",
+          description:
+            "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods.",
+        }),
+      },
+    ],
   }),
   component: Home,
 });
