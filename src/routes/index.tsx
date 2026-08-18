@@ -41,8 +41,10 @@ function Home() {
           <img
             src={hero}
             alt="Indrele parfum bottle on dark stone amid golden smoke"
-            width={1920}
-            height={1088}
+            width={1600}
+            height={907}
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="fade-veil absolute inset-0" />
