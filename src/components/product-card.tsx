@@ -10,8 +10,8 @@ export function ProductCard({ product }: { product: Product }) {
             src={product.image}
             alt={`${product.name} parfum bottle by Indrele`}
             loading="lazy"
-            width={912}
-            height={1200}
+            width={760}
+            height={1000}
             className="h-[26rem] w-full object-contain transition-transform duration-700 group-hover:scale-105"
           />
         </div>

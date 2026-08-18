@@ -1,7 +1,7 @@
-import throne from "@/assets/p1.jpg";
-import orion from "@/assets/p2.jpg";
-import verdant from "@/assets/p3.jpg";
-import nocturne from "@/assets/p4.jpg";
+import throne from "@/assets/p1.webp";
+import orion from "@/assets/p2.webp";
+import verdant from "@/assets/p3.webp";
+import nocturne from "@/assets/p4.webp";
 
 export type Product = {
   slug: string;

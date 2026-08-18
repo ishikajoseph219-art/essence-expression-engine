@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import story from "@/assets/story.jpg";
+import story from "@/assets/story.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,8 +34,8 @@ function About() {
           <img
             src={story}
             alt="Dark marble hall lit by gold light shafts"
-            width={1600}
-            height={912}
+            width={1400}
+            height={798}
             className="h-[60vh] w-full object-cover"
           />
           <div className="fade-veil absolute inset-0" />

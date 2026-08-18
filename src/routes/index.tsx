@@ -3,8 +3,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
 import { products } from "@/lib/products";
-import hero from "@/assets/hero.jpg";
-import story from "@/assets/story.jpg";
+import hero from "@/assets/hero.webp";
+import story from "@/assets/story.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,6 +24,21 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [
+      { rel: "preload", as: "image", href: hero, fetchpriority: "high" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Brand",
+          name: "Indrele",
+          description:
+            "Indrele is a parfum house of four absolutes — oud, leather, frozen citrus and green woods.",
+        }),
+      },
+    ],
   }),
   component: Home,
 });
@@ -38,8 +53,10 @@ function Home() {
           <img
             src={hero}
             alt="Indrele parfum bottle on dark stone amid golden smoke"
-            width={1920}
-            height={1088}
+            width={1600}
+            height={907}
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="fade-veil absolute inset-0" />
@@ -91,8 +108,8 @@ function Home() {
             src={story}
             alt="Dark marble hall with gold light and drifting smoke"
             loading="lazy"
-            width={1600}
-            height={912}
+            width={1400}
+            height={798}
             className="h-[70vh] w-full object-cover"
           />
           <div className="fade-veil absolute inset-0" />
