@@ -41,9 +41,13 @@ function ParfumDetail() {
         <section className="mx-auto grid max-w-7xl gap-14 px-6 py-16 lg:grid-cols-2">
           <img
             src={product.image}
+            srcSet={`${product.imageSmall} 400w, ${product.image} 760w`}
+            sizes="(min-width: 1024px) 620px, 92vw"
             alt={`${product.name} parfum bottle by Indrele`}
             width={760}
             height={1000}
+            fetchPriority="high"
+            decoding="async"
             className="w-full bg-ink object-contain"
           />
 

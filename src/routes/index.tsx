@@ -4,7 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
 import { products } from "@/lib/products";
 import hero from "@/assets/hero.webp";
+import heroSm from "@/assets/hero-960.webp";
 import story from "@/assets/story.webp";
+import storySm from "@/assets/story-800.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,7 +27,14 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "preload", as: "image", href: hero, fetchpriority: "high" },
+      {
+        rel: "preload",
+        as: "image",
+        href: hero,
+        imagesrcset: `${heroSm} 960w, ${hero} 1600w`,
+        imagesizes: "100vw",
+        fetchpriority: "high",
+      },
     ],
     scripts: [
       {
@@ -52,6 +61,8 @@ function Home() {
         <section className="relative flex min-h-[92vh] items-end justify-center overflow-hidden">
           <img
             src={hero}
+            srcSet={`${heroSm} 960w, ${hero} 1600w`}
+            sizes="100vw"
             alt="Indrele parfum bottle on dark stone amid golden smoke"
             width={1600}
             height={907}
@@ -105,9 +116,12 @@ function Home() {
 
         <section className="relative overflow-hidden">
           <img
-            src={story}
+            src={storySm}
+            srcSet={`${storySm} 800w, ${story} 1400w`}
+            sizes="100vw"
             alt="Dark marble hall with gold light and drifting smoke"
             loading="lazy"
+            decoding="async"
             width={1400}
             height={798}
             className="h-[70vh] w-full object-cover"
