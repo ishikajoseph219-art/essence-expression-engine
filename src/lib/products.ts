@@ -1,7 +1,11 @@
 import throne from "@/assets/p1.webp";
+import throneSm from "@/assets/p1-400.webp";
 import orion from "@/assets/p2.webp";
+import orionSm from "@/assets/p2-400.webp";
 import verdant from "@/assets/p3.webp";
+import verdantSm from "@/assets/p3-400.webp";
 import nocturne from "@/assets/p4.webp";
+import nocturneSm from "@/assets/p4-400.webp";
 
 export type Product = {
   slug: string;
@@ -11,6 +15,7 @@ export type Product = {
   price: number;
   size: string;
   image: string;
+  imageSmall: string;
   family: string;
   story: string;
   pyramid: { label: string; value: string }[];
@@ -25,6 +30,7 @@ export const products: Product[] = [
     price: 2499,
     size: "100ml Extrait de Parfum",
     image: throne,
+    imageSmall: throneSm,
     family: "Amber Leather",
     story:
       "Built for the room you walk into last. Smoked leather laid over amber resins, softened by a breath of vanilla that never asks permission.",
@@ -42,6 +48,7 @@ export const products: Product[] = [
     price: 2199,
     size: "100ml Eau de Parfum",
     image: orion,
+    imageSmall: orionSm,
     family: "Frozen Citrus",
     story:
       "Cold air at altitude. Crushed citrus peel over mineral musk and a metallic vetiver trail that lingers long after the room empties.",
@@ -59,6 +66,7 @@ export const products: Product[] = [
     price: 2199,
     size: "100ml Eau de Parfum",
     image: verdant,
+    imageSmall: verdantSm,
     family: "Green Woods",
     story:
       "Rain on fig leaves at first light. Bitter green stems, dry woods, and a quiet restraint that reads as confidence.",
@@ -76,6 +84,7 @@ export const products: Product[] = [
     price: 2899,
     size: "100ml Extrait de Parfum",
     image: nocturne,
+    imageSmall: nocturneSm,
     family: "Oud Smoke",
     story:
       "Aged oud burned over red fruits and incense. The heaviest thing we make, and the one people remember you by.",
