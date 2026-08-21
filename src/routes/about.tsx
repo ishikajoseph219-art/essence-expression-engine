@@ -22,6 +22,16 @@ export const Route = createFileRoute("/about")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: story,
+        imagesrcset: `${storySm} 800w, ${story} 1400w`,
+        imagesizes: "100vw",
+        fetchpriority: "high",
+      },
+    ],
   }),
   component: About,
 });
@@ -37,7 +47,7 @@ function About() {
             srcSet={`${storySm} 800w, ${story} 1400w`}
             sizes="100vw"
             alt="Dark marble hall lit by gold light shafts"
-            loading="lazy"
+            fetchPriority="high"
             decoding="async"
             width={1400}
             height={798}
