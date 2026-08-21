@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import story from "@/assets/story.webp";
+import storySm from "@/assets/story-800.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -21,6 +22,16 @@ export const Route = createFileRoute("/about")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: story,
+        imageSrcSet: `${storySm} 800w, ${story} 1400w`,
+        imageSizes: "100vw",
+        fetchPriority: "high",
+      },
+    ],
   }),
   component: About,
 });
@@ -32,8 +43,12 @@ function About() {
       <main>
         <section className="relative">
           <img
-            src={story}
+            src={storySm}
+            srcSet={`${storySm} 800w, ${story} 1400w`}
+            sizes="100vw"
             alt="Dark marble hall lit by gold light shafts"
+            fetchPriority="high"
+            decoding="async"
             width={1400}
             height={798}
             className="h-[60vh] w-full object-cover"
