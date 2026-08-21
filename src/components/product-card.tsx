@@ -5,14 +5,17 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group">
       <Link to="/parfum/$slug" params={{ slug: product.slug }} className="block">
-        <div className="overflow-hidden bg-ink">
+        <div className="overflow-hidden bg-ink" style={{ aspectRatio: "760 / 1000" }}>
           <img
-            src={product.image}
+            src={product.imageSmall}
+            srcSet={`${product.imageSmall} 400w, ${product.image} 760w`}
+            sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 90vw"
             alt={`${product.name} parfum bottle by Indrele`}
             loading="lazy"
+            decoding="async"
             width={760}
             height={1000}
-            className="h-[26rem] w-full object-contain transition-transform duration-700 group-hover:scale-105"
+            className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
           />
         </div>
         <div className="mt-5 text-center">
